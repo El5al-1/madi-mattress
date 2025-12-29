@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ماضي للمراتب - مراتب طبية عالية الجودة بأسعار تنافسية. ضمان 10 سنوات وتوصيل سريع لجميع محافظات مصر"
+    />
+    <meta
+      name="keywords"
+      content="مراتب, مراتب طبية, مراتب مصر, مراتب رويال, مراتب جولد, مراتب بلوتوب, ماضي للمراتب"
+    />
+    <meta name="author" content="ماضي للمراتب" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="ماضي للمراتب - مراتب طبية عالية الجودة"
+    />
+    <meta
+      property="og:description"
+      content="اكتشف الراحة والجودة مع ماضي للمراتب. ضمان 10 سنوات وتوصيل سريع"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="bed2.jpg" />
+
+    <title>ماضي للمراتب - مراتب طبية عالية الجودة</title>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+      as="style"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <img src="logo.png" alt="Logo" class="loading-logo" />
+    </div>
+
+    <div class="container">
+      <!-- HEADER -->
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">
+            <a href="#home"><img src="logo.png" alt="لوجو ماضي للمراتب" /></a>
+          </div>
+          <div>
+            <h1>ماضي للمراتب</h1>
+            <div class="muted">مراتب مريحة وجودة عالية</div>
+          </div>
+        </div>
+
+        <nav class="nav" id="navMenu">
+          <ul>
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> الرئيسية</a>
+            </li>
+            <li>
+              <a href="#tabs"><i class="fas fa-bed"></i> المنتجات</a>
+            </li>
+            <li>
+              <a href="#services"><i class="fas fa-tools"></i> الخدمات</a>
+            </li>
+            <li>
+              <a href="#features"><i class="fas fa-star"></i> المميزات</a>
+            </li>
+            <li>
+              <a href="#offers-link"><i class="fas fa-tags"></i> العروض</a>
+            </li>
+            <li>
+              <a href="#reviews"><i class="fas fa-comments"></i> التقييمات</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-info-circle"></i> من نحن</a>
+            </li>
+            <li>
+              <a href="#faq"><i class="fas fa-question-circle"></i> الأسئلة</a>
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-phone"></i> اتصل بنا</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <button id="themeToggle" class="btn" aria-label="تغيير الوضع">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+          <button id="menuToggle" class="btn" aria-label="القائمة">
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Nav Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
+
+      <!-- HERO -->
+      <main id="home">
+        <section class="hero-full">
+          <img src="bedlight.png" alt="مرتبة عالية الجودة" class="hero-bg" />
+          <div class="hero-overlay">
+            <h2>مراتب مريحة لجسمك</h2>
+            <p>اكتشف الراحة والجودة مع ماضي للمراتب</p>
+            <a href="#tabs" class="btn-hero">تسوق الآن</a>
+          </div>
+          <div class="scroll-indicator">
+            <a href="#tabs"><i class="fas fa-chevron-down"></i></a>
+          </div>
+        </section>
+      </main>
+
+      <!-- PRODUCTS -->
+      <section id="products">
+        <h2 id="tabs" class="section-title">منتجاتنا</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="mattresses">المراتب</button>
+          <button class="tab-btn" data-tab="accessories">الإكسسوارات</button>
+        </div>
+        <div class="products-container" id="products-container"></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-truck"></i>
+            <h3>خدمة توصيل سريعة</h3>
+            <p>
+              نوفر خدمة التوصيل لجميع المحافظات داخل مصر مع ضمان وصول المنتج
+              بحالة ممتازة في أسرع وقت ممكن
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>تقسيط مريح</h3>
+            <p>
+              أنظمة تقسيط مرنة تناسب جميع الفئات بدون فوائد إضافية وبأسهل
+              الإجراءات
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>ضمان ممتد 10 سنوات</h3>
+            <p>ضمان حقيقي يصل إلى 10 سنوات على جميع منتجاتنا ضد عيوب الصناعة</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2 class="section-title">لماذا تختار مراتب ماضي؟</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon">🛌</div>
+            <h3>راحة فاخرة</h3>
+            <p>
+              طبقات إسفنج عالية الجودة تمنحك نوم هادئ ومريح لساعات طويلة دون أي
+              إزعاج
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🦴</div>
+            <h3>دعم طبي للعمود الفقري</h3>
+            <p>
+              تصميم طبي معتمد يقلل آلام الظهر ويضمن توزيع مثالي للوزن على جميع
+              نقاط الجسم
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🛡️</div>
+            <h3>ضمان 10 سنوات</h3>
+            <p>
+              ضمان فعلي على الهبوط والعيوب التصنيعية لسنوات طويلة مع خدمة ما بعد
+              البيع الممتازة
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🌿</div>
+            <h3>خامات مضادة للحساسية</h3>
+            <p>
+              أقمشة معالجة ضد البكتيريا والعث وتراكم الأتربة لحماية صحتك وصحة
+              عائلتك
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- OFFERS LINK -->
+      <section id="offers-link">
+        <h2 class="section-title">تابع عروضنا على الفيسبوك</h2>
+        <div class="text-center mt-20">
+          <a
+            href="https://www.facebook.com/share/1Dtf3nLR7p/"
+            target="_blank"
+            class="btn-hero"
+          >
+            <i class="fab fa-facebook-f"></i> شاهد العروض الآن
+          </a>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews">
+        <h2 class="section-title">آراء عملائنا</h2>
+
+        <div class="reviews-container" id="reviewsContainer">
+          <!-- Reviews injected by JS -->
+        </div>
+
+        <div class="text-center mt-20">
+          <a
+            href="https://www.facebook.com/ElQorashia.friends.bed/reviews"
+            target="_blank"
+            class="btn-hero"
+          >
+            <i class="fab fa-facebook-f"></i>
+            قيّم تجربتك معنا
+          </a>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2 class="section-title">من نحن</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              ماضي للمراتب هي شركة رائدة في مجال تصنيع وتوزيع المراتب الطبية
+              عالية الجودة في مصر. نفخر بتقديم منتجات مصنوعة من أجود الخامات
+              المحلية والمستوردة.
+            </p>
+            <p>
+              نسعى دائماً لتوفير تجربة نوم مريحة وصحية لجميع عملائنا من خلال
+              منتجات معتمدة طبياً ومصممة بأحدث التقنيات العالمية.
+            </p>
+            <p>
+              فريقنا من الخبراء والمتخصصين يعمل بشكل متواصل لضمان حصولكم على
+              أفضل منتج يناسب احتياجاتكم وميزانيتكم.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">سنة خبرة</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10K+</div>
+              <div class="stat-label">عميل سعيد</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">ضمان الجودة</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>ما هي مدة الضمان على المراتب؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نوفر ضمان يصل إلى 10 سنوات على جميع منتجاتنا ضد عيوب الصناعة
+                والهبوط. الضمان يشمل الاستبدال المجاني في حالة وجود أي عيوب
+                تصنيعية.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل يمكن التقسيط؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                نعم، نوفر أنظمة تقسيط مرنة بدون فوائد إضافية. يمكنك التواصل معنا
+                لمعرفة خيارات التقسيط المتاحة.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>كيف أختار المقاس المناسب؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                المقاس يعتمد علي عدد الافراد الفرد الواحد من 100سم الي 120سم
+                وفردين 160سم وهكذا
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>ما الفرق بين المراتب المختلفة؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                كل مرتبة مصممة لاحتياجات مختلفة. رويال: مناسبة للجميع بسعر
+                اقتصادي. جولد: راحة فاخرة بإسفنج ميموري فوم. بلوتوب: تقنية تبريد
+                متقدمة. ماريوت: تجربة فندقية فاخرة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact-info" id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <p style="font-size: 18px; color: var(--muted); margin-bottom: 20px">
+          نحن هنا للرد على جميع استفساراتكم
+        </p>
+        <div class="contact-cards">
+          <a
+            href="https://www.facebook.com/share/1Dtf3nLR7p/"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-facebook-f"></i>
+            <div>
+              <h3>Facebook</h3>
+              <p>تابع صفحتنا للحصول على آخر التحديثات والعروض</p>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/201001054393"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>راسلنا مباشرة: 01001054393</p>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/201006764087"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>راسلنا مباشرة: 01006764087</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#products">المنتجات</a>
+            <a href="#services">الخدمات</a>
+            <a href="#about">من نحن</a>
+            <a href="#contact">اتصل بنا</a>
+          </div>
+          <p><strong>ماضي للمراتب</strong> - جميع الحقوق محفوظة © 2024</p>
+          <p>📍 العنوان: القرشية - أمام جزارة الديب | 📞 هاتف: 01001054393</p>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/share/1Dtf3nLR7p/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://wa.me/201001054393"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Popup تأكيد الإضافة للسلة -->
+      <div id="cart-popup" class="cart-popup">
+        <div class="cart-popup-content">
+          <i class="fas fa-check-circle"></i>
+          <p id="cart-popup-message"></p>
+          <button id="cart-popup-close" class="btn-hero">حسناً</button>
+        </div>
+      </div>
+
+      <!-- Back to Top Button -->
+      <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
