@@ -135,11 +135,21 @@ const productsData = {
 };
 
 // ================== إزالة شاشة التحميل ==================
-window.addEventListener("load", () => {
+// ===== Fix Loading Screen freeze =====
+const loading = document.querySelector('.loading-screen');
+
+if (loading) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loading.classList.add('hidden');
+    }, 500);
+  });
+
+  // fallback لو الصفحة علقت
   setTimeout(() => {
-    document.querySelector(".loading-screen").classList.add("hidden");
+    loading.classList.add('hidden');
   }, 2000);
-});
+}
 
 // ================== تحميل الثيم المحفوظ ==================
 window.addEventListener("DOMContentLoaded", () => {
