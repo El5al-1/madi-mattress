@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <!-- الصفحة الرئيسية -->
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <!-- index.html -->
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/index.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <!-- ملفات JS و CSS لو عايز تضيفها (اختياري) -->
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/main.js</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/style.css</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <!-- صور مهمة -->
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/img/logo.png</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.4</priority>
+   </url>
+   <url>
+      <loc>https://el5al-1.github.io/madi-mattress/img/mainbg.jpg</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.4</priority>
+   </url>
+
+</urlset>
