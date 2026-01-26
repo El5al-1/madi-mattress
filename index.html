@@ -15,13 +15,13 @@
 
     <title>ماضي للمراتب - تجربة نوم صحية بمعايير عالمية</title>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN41RR94F7"></script>
+     <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC150SSWXM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-PN41RR94F7');
+      gtag('config', 'G-BC150SSWXM');
     </script>
 
     <!-- Preload critical resources -->
@@ -150,11 +150,38 @@
                     </div>
                 </div>
                 
-                <div class="cart-summary" id="cart-summary">
+<div class="cart-summary" id="cart-summary">
                     <div class="summary-row">
                         <span>عدد المنتجات:</span>
                         <span id="summary-count">0</span>
                     </div>
+                    <div class="summary-row">
+                        <span>المجموع الفرعي:</span>
+                        <span id="summary-subtotal">0 جنيه</span>
+                    </div>
+                    
+                    <!-- قسم البروموكود -->
+                    <div class="promo-section">
+                        <div class="promo-input-group">
+                            <input 
+                                type="text" 
+                                id="promo-code-input" 
+                                placeholder="أدخل كود الخصم هنا"
+                                class="promo-input"
+                            />
+                            <button id="apply-promo" class="apply-promo-btn">
+                                <i class="fas fa-tag"></i> تطبيق
+                            </button>
+                        </div>
+                        <div id="promo-message" class="promo-message"></div>
+                    </div>
+                    
+                    <!-- صف الخصم (يظهر فقط عند تطبيق كود صحيح) -->
+                    <div class="summary-row discount-row hidden" id="discount-row">
+                        <span>الخصم (<span id="discount-percent">0</span>%):</span>
+                        <span id="discount-amount" class="discount-amount">- 0 جنيه</span>
+                    </div>
+                    
                     <div class="summary-row">
                         <span>المجموع الكلي:</span>
                         <span id="summary-total">0 جنيه</span>
@@ -263,7 +290,7 @@
                 <div class="offer-banner">
                     <div class="offer-content">
                         <div class="offer-badge">عرض محدود</div>
-                        <h3>خصم يصل إلى 25% على المجموعة الكاملة</h3>
+                        <h3>خصم يصل إلى 10% على المجموعة الكاملة</h3>
                         <p>اطلع على أحدث العروض والمنتجات الجديدة عبر صفحتنا على فيسبوك</p>
                         <a href="https://www.facebook.com/share/1Dtf3nLR7p/" target="_blank" class="btn-hero">
                             <i class="fab fa-facebook-f"></i> تصفح العروض الآن
