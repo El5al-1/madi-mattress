@@ -1726,6 +1726,7 @@ section {
   transition: all var(--transition);
   text-align: center;
   text-transform: uppercase;
+  width: 50%;
 }
 
 .promo-input:focus {
