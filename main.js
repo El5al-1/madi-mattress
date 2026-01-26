@@ -118,9 +118,78 @@ const productsData = {
   ],
 };
 
+// ================== دوال Local Storage ==================
+function saveCartToLocalStorage() {
+  try {
+    localStorage.setItem('madyCart', JSON.stringify(cart));
+  } catch (error) {
+    console.log("خطأ في حفظ السلة:", error);
+  }
+}
+
+function loadCartFromLocalStorage() {
+  try {
+    const savedCart = localStorage.getItem('madyCart');
+    if (savedCart) {
+      cart = JSON.parse(savedCart);
+    }
+  } catch (error) {
+    console.log("خطأ في تحميل السلة:", error);
+    cart = [];
+  }
+}
+
+function savePromoToLocalStorage() {
+  try {
+    if (appliedPromoCode) {
+      localStorage.setItem('madyPromo', JSON.stringify(appliedPromoCode));
+    } else {
+      localStorage.removeItem('madyPromo');
+    }
+  } catch (error) {
+    console.log("خطأ في حفظ البروموكود:", error);
+  }
+}
+
+function loadPromoFromLocalStorage() {
+  try {
+    const savedPromo = localStorage.getItem('madyPromo');
+    if (savedPromo) {
+      appliedPromoCode = JSON.parse(savedPromo);
+    }
+  } catch (error) {
+    console.log("خطأ في تحميل البروموكود:", error);
+    appliedPromoCode = null;
+  }
+}
+
+function saveThemeToLocalStorage() {
+  try {
+    localStorage.setItem('madyTheme', currentTheme);
+  } catch (error) {
+    console.log("خطأ في حفظ الثيم:", error);
+  }
+}
+
+function loadThemeFromLocalStorage() {
+  try {
+    const savedTheme = localStorage.getItem('madyTheme');
+    if (savedTheme) {
+      currentTheme = savedTheme;
+    }
+  } catch (error) {
+    console.log("خطأ في تحميل الثيم:", error);
+  }
+}
+
 // ================== التهيئة الرئيسية ==================
 document.addEventListener("DOMContentLoaded", function () {
   console.log("جاري تهيئة الموقع...");
+
+  // تحميل البيانات من Local Storage
+  loadThemeFromLocalStorage();
+  loadCartFromLocalStorage();
+  loadPromoFromLocalStorage();
 
   setTimeout(() => {
     const loadingScreen = document.querySelector(".loading-screen");
@@ -152,6 +221,7 @@ function initializeTheme() {
       themeToggle.addEventListener("click", function () {
         currentTheme = currentTheme === "dark" ? "light" : "dark";
         document.documentElement.setAttribute("data-theme", currentTheme);
+        saveThemeToLocalStorage();
       });
     }
   } catch (error) {
@@ -506,6 +576,7 @@ function addToCart(product) {
       cart.push(cartItem);
     }
 
+    saveCartToLocalStorage();
     updateCartUI();
     showSuccessPopup(`${product.name}<br>تمت الإضافة إلى السلة بنجاح`);
   } catch (error) {
@@ -557,6 +628,7 @@ function updateCartUI() {
 
       if (appliedPromoCode) {
         appliedPromoCode = null;
+        savePromoToLocalStorage();
       }
     } else {
       if (cartSummary) cartSummary.classList.remove("hidden");
@@ -703,6 +775,7 @@ function applyPromoCode() {
       promoMessage.innerHTML = `<i class="fas fa-check-circle"></i> ${promoCodes[code].description} - تم التطبيق بنجاح!`;
 
       promoInput.disabled = true;
+      savePromoToLocalStorage();
       updateCartUI();
 
       showSuccessPopup(
@@ -738,11 +811,13 @@ function updateCartQuantity(index, change) {
         "warning",
         function () {
           cart.splice(index, 1);
+          saveCartToLocalStorage();
           updateCartUI();
           showSuccessPopup("تم حذف المنتج من السلة");
         },
       );
     } else {
+      saveCartToLocalStorage();
       updateCartUI();
     }
   } catch (error) {
@@ -755,6 +830,7 @@ function removeFromCart(index) {
   try {
     if (index >= 0 && index < cart.length) {
       cart.splice(index, 1);
+      saveCartToLocalStorage();
       updateCartUI();
     }
   } catch (error) {
@@ -767,6 +843,8 @@ function clearCart() {
   try {
     cart = [];
     appliedPromoCode = null;
+    saveCartToLocalStorage();
+    savePromoToLocalStorage();
     updateCartUI();
   } catch (error) {
     console.log("خطأ في تفريغ السلة:", error);
